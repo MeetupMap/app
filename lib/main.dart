@@ -36,23 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     _locations.insert(_locations.length, l1);
   }
-
-  StatefulWidget _buildMap() {
-    return FlutterMap(
-        options: MapOptions(
-          center: LatLng(51.5, -0.09),
-          zoom: 20.0,
-        ),
-        layers: [
-          TileLayerOptions(
-              urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-              subdomains: ['a', 'b', 'c']),
-          MarkerLayerOptions(
-            markers: _locations,
-          ),
-        ]);
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
